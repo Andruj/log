@@ -1,15 +1,20 @@
+import 'dart:async';
+
 import '../lib/log.dart';
 
 
-main() {
-  log('Hello World');
-  error('Hello World');
-  success('Hello World');
-  warning('Hello World');
 
+main() async {
+  log('Simple output for the user.');
+  error('An error happened!');
+  success('Something passed...');
+  warning('Here is a warning.');
+
+  await new Future.delayed(const Duration(seconds: 1));
   var dev = new Developer(true);
-  dev.error('Whoops!');
+  dev.error('Only visible if in developer mode.');
 
+  await new Future.delayed(const Duration(seconds: 1));
   dev = new Developer(true, 'DEBUG: ');
-  dev.warning('A warning is here!');
+  dev.warning('A warning is here, with a custom prefix...');
 }
