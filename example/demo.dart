@@ -1,14 +1,11 @@
 import 'dart:async';
-
-import '../lib/log.dart';
-
-
+import 'package:log/log.dart';
 
 main() async {
-  log('Simple output for the user.');
-  error('An error happened!');
-  success('Something passed...');
-  warning('Here is a warning.');
+  Logger.message('Simple output for the user.');
+  Logger.error('An error happened!');
+  Logger.success('Something passed...');
+  Logger.warning('Here is a warning.');
 
   await new Future.delayed(const Duration(seconds: 1));
   var dev = new Developer(true);
