@@ -1,12 +1,13 @@
-import '../lib/log.dart' as _;
+part of log;
 
 class Developer {
   final enabled;
+  final prefix;
   
-  Developer(this.enabled);
+  Developer(this.enabled, [this.prefix = '']);
   
-  log(text) => enabled ? _.log(text) : null;
-  error(text) => enabled ? _.error(text) : null;
-  warning(text) => enabled ? _.warning(text) : null;
-  success(text) => enabled ? _.success(text) : null;
+  message(text) => enabled ? Logger.message('$prefix$text') : null;
+  error(text) => enabled ? Logger.error('$prefix$text') : null;
+  warning(text) => enabled ? Logger.warning('$prefix$text') : null;
+  success(text) => enabled ? Logger.success('$prefix$text') : null;
 }
