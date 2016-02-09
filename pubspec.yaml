@@ -1,9 +1,9 @@
 name: log
-version: 0.0.3
+version: 0.0.4
 author: Andrew Peterson <andrewwaynepeterson@gmail.com>
 description: A logging tool for dart CLI applications.
 homepage: http://github.com/andruj/log
-environment: 
+environment:
   sdk: ">=1.8.0"
 dependencies:
   dye: ^0.0.1
