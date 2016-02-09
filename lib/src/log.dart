@@ -1,6 +1,6 @@
 part of log;
 
-class Logger {
+class Log {
   static message(text) => print('${now()} $text');
   static error(text) => print('${now(color: red)} $text');
   static success(text) => print('${now(color: green)} $text');
