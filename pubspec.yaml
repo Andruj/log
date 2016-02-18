@@ -1,5 +1,5 @@
 name: log
-version: 0.0.4
+version: 0.0.5
 author: Andrew Peterson <andrewwaynepeterson@gmail.com>
 description: A logging tool for dart CLI applications.
 homepage: http://github.com/andruj/log
