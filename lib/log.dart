@@ -3,4 +3,4 @@ import 'package:dye/dye.dart';
 
 part "src/log.dart";
 part "src/timestamp.dart";
-part "src/developer.dart";
+part "src/dev.dart";

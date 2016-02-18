@@ -8,10 +8,10 @@ main() async {
   Log.warning('Here is a warning.');
 
   await new Future.delayed(const Duration(seconds: 1));
-  var dev = new Developer(true);
-  dev.error('Only visible if in developer mode.');
+  Dev.enabled = true;
+  Dev.error('Only visible if in developer mode.');
 
   await new Future.delayed(const Duration(seconds: 1));
-  dev = new Developer(true, 'DEBUG: ');
-  dev.warning('A warning is here, with a custom prefix...');
+  Dev.prefix = 'DEBUG :';
+  Dev.warning('A warning is here, with a custom prefix...');
 }
