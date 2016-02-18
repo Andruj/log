@@ -8,10 +8,12 @@ main() async {
   Log.warning('Here is a warning.');
 
   await new Future.delayed(const Duration(seconds: 1));
-  Dev.enabled = true;
+  Dev.enable();
   Dev.error('Only visible if in developer mode.');
 
   await new Future.delayed(const Duration(seconds: 1));
-  Dev.prefix = 'DEBUG :';
+  Dev.prefix = 'DEBUG: ';
   Dev.warning('A warning is here, with a custom prefix...');
+  Dev.disable();
+  Dev.success('This is not seen');
 }
